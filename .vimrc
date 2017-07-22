@@ -1,6 +1,9 @@
 "act similar to mswin applications, Control+C, Control+P, etc.
 behave mswin
 
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 "its ok to not be vi compatibale
 set nocompatible
 
