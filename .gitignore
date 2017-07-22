@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Whiltelist what to keep
+!.bash_logout
+!.bashrc
+!.gitignore
+!.profile
+!.vim/*
+!.vimrc
