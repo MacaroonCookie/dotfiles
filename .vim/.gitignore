@@ -1,0 +1,6 @@
+# Whitelist .vim files
+!*/
+!*/*
+
+# Ignore certain files
+.netrwhist

@@ -5,6 +5,8 @@
 !.bash_logout
 !.bashrc
 !.gitignore
+!.gitmodules
 !.profile
+!.vim/
 !.vim/*
 !.vimrc
