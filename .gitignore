@@ -4,6 +4,7 @@
 # Whiltelist what to keep
 !.bash_logout
 !.bashrc
+!.gitconfig
 !.gitignore
 !.gitmodules
 !.profile
