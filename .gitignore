@@ -8,6 +8,7 @@
 !.gitignore
 !.gitmodules
 !.profile
+!.tmux.conf
 !.vim/
 !.vim/*
 !.vimrc
