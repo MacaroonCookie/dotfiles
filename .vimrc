@@ -116,6 +116,9 @@ if has("autocmd")
 	" Support mips.asm files
 	autocmd BufNewFile,BufRead *.mips.asm set syntax=mips.vim
 
+  " Support crontab files
+  autocmd BufNewFile,BufRead,BufReadPost *.cron,*.crontab set filetype=crontab
+
     " Trim Trailing white space on general files
     autocmd FileType c,cpp,java,php,js,css,xml,xsl,s autocmd BufWritePre * :%s/[ \t\r]\+$//e
 endif

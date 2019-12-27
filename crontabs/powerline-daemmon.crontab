@@ -1,0 +1,1 @@
+*/10 * * * * /bin/ps powerline-daemonn -o pid= >/dev/null || /usr/bin/powerline-daemon -q
