@@ -115,3 +115,53 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Exports
+export PAGER="most"
+export SHELL="vim"
+
+# Aliases
+
+# Functions
+function showcolors() {
+  dcchar=0\-1
+  scchar=-1
+  if [[ "$1" =~ ^fg$ ]] ; then
+    dcchar=38
+    scchar=48
+  elif [[ "$1" =~ ^bg$ ]] ; then
+    scchar=38
+    dcchar=48
+  else
+    echo "Color section must be 'fg' or 'bg'"
+    return 1
+  fi
+
+  cstatic=""
+  if [ -n "$2" ] && [ "$2" -gt -1 ] ; then
+    cstatic="$2"
+  fi
+
+  cstart=0
+  if [ -n "$3" ] && [ "$3" -ge 0 ] && [ "$3" -le 255 ] ; then
+    cstart="$3"
+  fi
+
+  cend=255
+  if [ -n "$4" ] && [ "$4" -ge "$cstart" ] && [ "$4" -le 255 ] ; then
+    cend="$4"
+  fi
+
+  for color in $(seq "${cstart}" "${cend}") ; do
+    if [ -n "$cstatic" ] ; then
+      printf "\x1b[${scchar};5;${cstatic}m"
+    fi
+
+    printf "\x1b[${dcchar};5;${color}mcolor%-5i\x1b[0m" "$color"
+    if ! (( ("$color" + 1 ) % 8 )) ; then
+      printf "\n"
+    fi
+  done
+
+  printf "\x1b[0m"
+}
