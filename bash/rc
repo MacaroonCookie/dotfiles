@@ -1,6 +1,5 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# Should be linked to ~/.bash_rc
+# This file is loaded for non-interactive Bash sessions (ie. a script)
 
 # If not running interactively, don't do anything
 case $- in
@@ -118,7 +117,8 @@ fi
 
 # Exports
 export PAGER="most"
-export SHELL="vim"
+export SHELL="bash"
+export EDITOR="vim"
 
 # Aliases
 

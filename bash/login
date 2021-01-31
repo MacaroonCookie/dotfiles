@@ -1,0 +1,14 @@
+# Should be linked to ~/.bash_login
+# This file is loaded when a bash login session is started (ie. a user logs in)
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin directories
+DOTFILES_REPO_SRC_DIR="$HOME/.dotfiles"
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
