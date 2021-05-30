@@ -113,6 +113,10 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+
+  if [ -d "${HOME}/.bash_completions" ] ; then
+    . ~/.bash_completions/*
+  fi
 fi
 
 # Exports

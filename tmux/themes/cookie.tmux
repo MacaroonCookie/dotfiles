@@ -2,9 +2,9 @@
 # To enable: set `THEME=cookie` in `~/.tmux.conf`
 # ==============================================================================
 # Copy Mode Formatting & Styling -----------------------------------------------
-setw mode-style 'fg=colour232'
-setw -a mode-style 'bg=colour6'
-setw -a mode-style 'bold'
+setw -g mode-style 'fg=colour232'
+setw -g -a mode-style 'bg=colour6'
+setw -g -a mode-style 'bold'
 
 # Pane Formatting & Styling ----------------------------------------------------
 # --- Pane: Title Format
